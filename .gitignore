@@ -1,2 +1,4 @@
 data/*
 metabase-data/*
+work/.ipynb_checkpoints
+work/data

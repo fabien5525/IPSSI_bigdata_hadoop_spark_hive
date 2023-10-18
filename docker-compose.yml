@@ -125,6 +125,15 @@ services:
     ports:
       - "3000:3000"
 
+  pyspark-notebook:
+    image: jupyter/pyspark-notebook
+    container_name: pyspark_notebook
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./work:/home/jovyan/work
+      - ./data://home/jovyan/work/data
+
 volumes:
   hadoop_namenode:
   hadoop_datanode:
