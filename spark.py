@@ -1,7 +1,7 @@
 from pyspark.sql import SparkSession
 import re
 from pyspark.sql.types import *
-from pyspark.sql.functions import lit
+from pyspark.sql.functions import lit, udf
 
 spark = SparkSession.builder \
     .appName("MyApp") \
