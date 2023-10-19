@@ -37,6 +37,39 @@ def getYear(colonne):
 anime_2023 = anime_2023.withColumn("AiredYear",
                                    lit(getYear(anime_2023["Aired"])))
 
+@udf(returnType=StringType())
+def getSeason(colonne):
+    
+    month = colonne[0:3]
+
+    match month:
+        case "Jan":
+            return "Winter"
+        case "Feb":
+            return "Winter"
+        case "Mar":
+            return "Winter"
+        case "Apr":
+            return "Spring"
+        case "May":
+            return "Spring"
+        case "Jun":
+            return "Spring"
+        case "Jul":
+            return "Summer"
+        case "Aug":
+            return "Summer"
+        case "Sep":
+            return "Summer"
+        case "Oct":
+            return "Fall"
+        case "Nov":
+            return "Fall"
+        case "Dec":
+            return "Fall"
+
+anime_2023 = anime_2023.withColumn("AiredSeason",  lit(getSeason(anime_2023["Aired"])))
+
 # save to hdfs
 anime_mal.write.csv("hdfs://namenode:9000/data/anime_treated/mal",
                     header=False)
