@@ -48,7 +48,7 @@ CREATE EXTERNAL TABLE IF NOT EXISTS anime_mal(
 )
 ROW FORMAT DELIMITED
 FIELDS TERMINATED BY ','
-LOCATION 'hdfs://namenode:9000/data/anime/mal/';
+LOCATION 'hdfs://namenode:9000/data/anime_treated/mal/';
 
 select title from anime_mal limit 10;
 
@@ -77,6 +77,6 @@ CREATE EXTERNAL TABLE IF NOT EXISTS anime_2023(
 )
 ROW FORMAT DELIMITED
 FIELDS TERMINATED BY ','
-LOCATION 'hdfs://namenode:9000/data/anime/2023/';
+LOCATION 'hdfs://namenode:9000/data/anime_treated/2023/';
 
 select Name from anime_2023 limit 10;
