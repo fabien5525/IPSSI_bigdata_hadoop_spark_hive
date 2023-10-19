@@ -61,7 +61,6 @@ CREATE EXTERNAL TABLE IF NOT EXISTS anime_2023(
   Episodes DOUBLE,
   Aired CHAR(250),
   Premiered CHAR(250),
-  Status CHAR(250),
   Producers CHAR(250),
   Licensors CHAR(250),
   Studios CHAR(250),
@@ -70,10 +69,12 @@ CREATE EXTERNAL TABLE IF NOT EXISTS anime_2023(
   Rating CHAR(250),
   Rank DOUBLE,
   Popularity INT,
-  Favorites INT,
-  Scored_By DOUBLE,
   Members INT,
-  Image_URL CHAR(250),
+  Favorites INT,
+  Watching INT,
+  Completed INT,
+  On_Hold INT,
+  Dropped INT,
   AiredYear INT,
   AiredSeason CHAR(250)
 )
