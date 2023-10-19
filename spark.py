@@ -24,14 +24,11 @@ pattern = r'\d{4}'
 
 @udf(returnType=StringType())
 def getYear(colonne):
-    print(colonne)
     match = re.search(pattern, colonne)
     if match:
         # Extract and print the matched year
         first_year = match.group()
         return first_year
-    else:
-        print("No year found in the string")
 
 
 anime_2023 = anime_2023.withColumn("AiredYear",

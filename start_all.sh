@@ -54,8 +54,14 @@ echo "[SCRIPT] Connecting to HiveServer2 and running /init.sql file"
 echo ""
 docker compose exec hive-server bash -c "beeline -u jdbc:hive2://localhost:10000 -f /init.sql"
 
+echo "[SCRIPT] checking if data files are in hdfs input directory :"
+echo "[SCRIPT] checking /data/anime_treated/mal"
+docker compose exec namenode bash -c "hdfs dfs -ls /data/anime_treated/mal"
+
+echo ""
+echo "[SCRIPT] checking /data/anime_treated/2023"
+docker compose exec namenode bash -c "hdfs dfs -ls /data/anime_treated/2023"
+
 echo ""
 echo "[SCRIPT] Done"
 echo ""
-
-docker compose exec namenode bash -c "hdfs dfs -ls /data/anime_treated/mal"
