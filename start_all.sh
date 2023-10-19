@@ -13,7 +13,7 @@ docker compose exec namenode bash -c "hdfs dfs -mkdir -p /data/anime/2023"
 
 ## Copy data files to hdfs input directory - Checked
 docker compose exec namenode bash -c "hdfs dfs -put /input/mal/anime.csv /data/anime/mal/anime.csv"
-docker compose exec namenode bash -c "hdfs dfs -put /input/2023/anime-dataset-2023.csv /data/anime/2023/anime.csv"
+docker compose exec namenode bash -c "hdfs dfs -put /input/2023/anime.csv /data/anime/2023/anime.csv"
 
 # Spark : 
 ## start spark with /spark.py script - checked
