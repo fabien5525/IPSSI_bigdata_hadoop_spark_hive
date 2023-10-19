@@ -39,31 +39,31 @@ def getSeason(colonne):
     
     month = colonne[0:3]
 
-    match month:
-        case "Jan":
-            return "Winter"
-        case "Feb":
-            return "Winter"
-        case "Mar":
-            return "Winter"
-        case "Apr":
-            return "Spring"
-        case "May":
-            return "Spring"
-        case "Jun":
-            return "Spring"
-        case "Jul":
-            return "Summer"
-        case "Aug":
-            return "Summer"
-        case "Sep":
-            return "Summer"
-        case "Oct":
-            return "Fall"
-        case "Nov":
-            return "Fall"
-        case "Dec":
-            return "Fall"
+    if month == "Jan":
+        return "Winter"
+    if month == "Feb":
+        return "Winter"
+    if month == "Mar":
+        return "Winter"
+    if month == "Apr":
+        return "Spring"
+    if month == "May":
+        return "Spring"
+    if month == "Jun":
+        return "Spring"
+    if month == "Jul":
+        return "Summer"
+    if month == "Aug":
+        return "Summer"
+    if month == "Sep":
+        return "Summer"
+    if month == "Oct":
+        return "Fall"
+    if month == "Nov":
+        return "Fall"
+    if month == "Dec":
+        return "Fall"
+    return "Other"
 
 anime_2023 = anime_2023.withColumn("AiredSeason",  lit(getSeason(anime_2023["Aired"])))
 
