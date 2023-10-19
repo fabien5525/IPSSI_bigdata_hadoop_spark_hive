@@ -74,7 +74,7 @@ CREATE EXTERNAL TABLE IF NOT EXISTS anime_2023(
   Scored_By DOUBLE,
   Members INT,
   Image_URL CHAR(250),
-  AiredYear INT
+  AiredYear INT,
   AiredSeason CHAR(250)
 )
 ROW FORMAT DELIMITED
