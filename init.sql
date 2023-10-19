@@ -55,11 +55,8 @@ select title from anime_mal limit 10;
 CREATE EXTERNAL TABLE IF NOT EXISTS anime_2023(
   anime_id INT,
   Name CHAR(250),
-  English_name CHAR(250),
-  Other_name CHAR(250),
   Score DOUBLE,
   Genres CHAR(250),
-  Synopsis CHAR(250),
   Type CHAR(250),
   Episodes DOUBLE,
   Aired CHAR(250),
